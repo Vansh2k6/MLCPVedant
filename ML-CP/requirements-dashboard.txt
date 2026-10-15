@@ -1,0 +1,3 @@
+# Install alongside requirements.txt. No API key or external service is needed.
+streamlit==1.64.0
+plotly==7.1.0

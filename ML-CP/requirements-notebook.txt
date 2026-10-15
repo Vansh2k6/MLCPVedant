@@ -1,0 +1,5 @@
+# Extra packages for analysis.ipynb, pinned from the project .venv. Install requirements.txt first.
+jupyter==1.1.1
+nbconvert==7.17.1
+ipykernel==7.4.0
+matplotlib==3.11.2

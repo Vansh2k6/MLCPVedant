@@ -1,0 +1,9 @@
+{
+    "test_rows": 111706,
+    "mean_actual_eur": 3144319.4635919286,
+    "mean_predicted_eur_uncorrected": 2107665.3941423856,
+    "mean_predicted_eur_smeared": 3170856.360499358,
+    "mean_bias_eur_uncorrected": 1036654.0694495431,
+    "mean_bias_eur_smeared": -26536.896907429105,
+    "mean_bias_log": 0.08106207058159236
+}

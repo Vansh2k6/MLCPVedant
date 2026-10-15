@@ -1,0 +1,48 @@
+{
+    "feature_set": "Clean (snapshot features dropped)",
+    "models": [
+        {
+            "Model": "Naive Baseline (Position x Tier Median)",
+            "Log RMSE": 1.4904489063876045,
+            "Log MAE": 1.1487741751433924,
+            "Euro RMSE": 9047329.764330812,
+            "Euro MAE": 2795266.816464648
+        },
+        {
+            "Model": "Baseline Ridge Regression",
+            "Log RMSE": 1.1562092854503128,
+            "Log MAE": 0.9050096445630135,
+            "Euro RMSE": 7157729.332277282,
+            "Euro MAE": 2244636.594419533
+        },
+        {
+            "Model": "Main XGBoost Regressor",
+            "Log RMSE": 0.9108405436330822,
+            "Log MAE": 0.6980602727317591,
+            "Euro RMSE": 4779167.1804875145,
+            "Euro MAE": 1600833.2726983007
+        },
+        {
+            "Model": "Main XGBoost Regressor (Smear-Corrected)",
+            "Log RMSE": 0.9108405436330822,
+            "Log MAE": 0.6980602727317591,
+            "Euro RMSE": 4493754.132391092,
+            "Euro MAE": 1653780.7212552056
+        }
+    ],
+    "xgboost_pct_improvement": {
+        "vs_ridge_baseline": {
+            "Log RMSE": 21.221827648760488,
+            "Log MAE": 22.867090209981185,
+            "Euro RMSE": 33.23068030896065,
+            "Euro MAE": 28.68185092062624
+        },
+        "vs_naive_baseline": {
+            "Log RMSE": 38.88817390992067,
+            "Log MAE": 39.23433449009892,
+            "Euro RMSE": 47.17593693412802,
+            "Euro MAE": 42.730573579985595
+        }
+    },
+    "smearing_factor": 1.5044401114673078
+}

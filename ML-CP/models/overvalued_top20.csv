@@ -1,0 +1,21 @@
+Rank,player_id,player_name,age,position,sub_position,club_name,league_tier,latest_test_date,actual_value_eur,predicted_value_eur,value_delta_eur,pct_difference
+1,670681,João Neves,21.7,Midfield,Central Midfield,Paris Saint-Germain,Tier 1 - Big 5,2026-06-01,140000000,33768763.0,-106231237.0,-75.9
+2,487469,Vitinha,26.3,Midfield,Defensive Midfield,Paris Saint-Germain,Tier 1 - Big 5,2026-06-01,140000000,36618190.0,-103381810.0,-73.8
+3,683840,Pedri,23.5,Midfield,Central Midfield,FC Barcelona,Tier 1 - Big 5,2026-06-05,150000000,48202884.0,-101797116.0,-67.9
+4,418560,Erling Haaland,25.9,Attack,Centre-Forward,Manchester City,Tier 1 - Big 5,2026-06-03,200000000,110889842.0,-89110158.0,-44.6
+5,502670,Khvicha Kvaratskhelia,25.3,Attack,Left Winger,Paris Saint-Germain,Tier 1 - Big 5,2026-06-01,140000000,57406347.0,-82593653.0,-59.0
+6,580195,Jamal Musiala,23.3,Midfield,Attacking Midfield,Bayern Munich,Tier 1 - Big 5,2026-05-27,100000000,25216348.0,-74783652.0,-74.8
+7,914562,Désiré Doué,21.0,Attack,Right Winger,Paris Saint-Germain,Tier 1 - Big 5,2026-06-01,120000000,47079710.0,-72920290.0,-60.8
+8,342229,Kylian Mbappé,27.5,Attack,Centre-Forward,Real Madrid,Tier 1 - Big 5,2026-06-05,180000000,113573879.0,-66426121.0,-36.9
+9,581678,Jude Bellingham,22.9,Midfield,Attacking Midfield,Real Madrid,Tier 1 - Big 5,2026-06-05,130000000,64162940.0,-65837060.0,-50.6
+10,566723,Michael Olise,24.5,Attack,Right Winger,Bayern Munich,Tier 1 - Big 5,2026-05-27,150000000,85565394.0,-64434606.0,-43.0
+11,792380,Aleksandar Pavlovic,22.1,Midfield,Defensive Midfield,Bayern Munich,Tier 1 - Big 5,2026-05-27,90000000,28301472.0,-61698528.0,-68.6
+12,349066,Alexander Isak,26.7,Attack,Centre-Forward,Liverpool FC,Tier 1 - Big 5,2026-06-03,85000000,25072184.0,-59927816.0,-70.5
+13,288230,Ousmane Dembélé,29.1,Attack,Centre-Forward,Paris Saint-Germain,Tier 1 - Big 5,2026-06-01,100000000,40911051.0,-59088949.0,-59.1
+14,576024,Julián Alvarez,26.3,Attack,Centre-Forward,Atlético de Madrid,Tier 1 - Big 5,2026-06-05,100000000,43618751.0,-56381249.0,-56.4
+15,583255,Antoine Semenyo,26.4,Attack,Right Winger,Manchester City,Tier 1 - Big 5,2026-06-03,80000000,25239590.0,-54760410.0,-68.5
+16,636703,Fermín López,23.1,Midfield,Attacking Midfield,FC Barcelona,Tier 1 - Big 5,2026-06-05,100000000,45727145.0,-54272855.0,-54.3
+17,1012564,Rayan,19.8,Attack,Right Winger,AFC Bournemouth,Tier 1 - Big 5,2026-06-03,60000000,6063489.0,-53936511.0,-89.9
+18,661171,Willian Pacho,24.6,Defender,Centre-Back,Paris Saint-Germain,Tier 1 - Big 5,2026-06-01,80000000,26222104.0,-53777896.0,-67.2
+19,357662,Declan Rice,27.4,Midfield,Central Midfield,Arsenal FC,Tier 1 - Big 5,2026-06-03,120000000,66838119.0,-53161881.0,-44.3
+20,1390649,Yan Diomande,19.5,Attack,Left Winger,RB Leipzig,Tier 1 - Big 5,2026-05-27,90000000,37309166.0,-52690834.0,-58.5

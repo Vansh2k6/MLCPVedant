@@ -1,0 +1,155 @@
+{
+  "scope": "Existing artifacts and raw data; no retraining",
+  "versions": {
+    "duckdb": "1.5.5",
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.9.0",
+    "xgboost": "3.4.1",
+    "pyarrow": "25.0.1"
+  },
+  "dataset": [
+    {
+      "row_count": 547653,
+      "players": 40883,
+      "first_date": "2014-01-01",
+      "last_date": "2026-06-12",
+      "duplicate_keys": 0
+    }
+  ],
+  "coverage": [
+    {
+      "league_tier": "Tier 1 - Big 5",
+      "row_count": 19817,
+      "zero_minutes": 2860,
+      "zero_minutes_pct": 14.43
+    },
+    {
+      "league_tier": "Tier 2 - Top European",
+      "row_count": 39142,
+      "zero_minutes": 13392,
+      "zero_minutes_pct": 34.21
+    },
+    {
+      "league_tier": "Tier 3 - Other First Tier",
+      "row_count": 26613,
+      "zero_minutes": 24380,
+      "zero_minutes_pct": 91.61
+    },
+    {
+      "league_tier": "Tier 4 - Lower / Other",
+      "row_count": 26134,
+      "zero_minutes": 22276,
+      "zero_minutes_pct": 85.24
+    }
+  ],
+  "seen_unseen": [
+    {
+      "cohort": "seen",
+      "row_count": 99774,
+      "players": 18495,
+      "log_rmse": 0.8766457625177616,
+      "euro_mae": 1701551.343163425
+    },
+    {
+      "cohort": "unseen",
+      "row_count": 11932,
+      "players": 3297,
+      "log_rmse": 1.1578995848649558,
+      "euro_mae": 758640.449819758
+    }
+  ],
+  "cv_boundaries": [
+    {
+      "fold": 1,
+      "train_end": "2017-06-26T00:00:00.000000",
+      "validation_start": "2017-06-26T00:00:00.000000",
+      "same_day_overlap": true
+    },
+    {
+      "fold": 2,
+      "train_end": "2020-03-11T00:00:00.000000",
+      "validation_start": "2020-03-11T00:00:00.000000",
+      "same_day_overlap": true
+    },
+    {
+      "fold": 3,
+      "train_end": "2022-03-31T00:00:00.000000",
+      "validation_start": "2022-03-31T00:00:00.000000",
+      "same_day_overlap": true
+    }
+  ],
+  "recomputed_metrics": [
+    {
+      "log_rmse": 0.9108405436330802,
+      "log_mae": 0.6980602727318128,
+      "euro_rmse": 4779167.180487509,
+      "euro_mae": 1600833.2726983055,
+      "corrected_prediction_log_rmse": 0.9644807830794186,
+      "corrected_prediction_log_mae": 0.7593883198092102,
+      "clipped_floor": 0,
+      "clipped_ceiling": 2
+    }
+  ],
+  "per_year": [
+    {
+      "valuation_year": 2024,
+      "row_count": 45373,
+      "log_rmse": 0.8839621725467273,
+      "euro_mae": 1477041.8961598347
+    },
+    {
+      "valuation_year": 2025,
+      "row_count": 45481,
+      "log_rmse": 0.9194399241421938,
+      "euro_mae": 1604028.1131985313
+    },
+    {
+      "valuation_year": 2026,
+      "row_count": 20852,
+      "log_rmse": 0.9488266711734743,
+      "euro_mae": 1863229.282044612
+    }
+  ],
+  "latest_dates": [
+    {
+      "oldest": "2024-01-14 00:00:00",
+      "newest": "2026-06-12 00:00:00",
+      "players": 21792,
+      "before_2026": 5081
+    }
+  ],
+  "persistence_context_baseline": [
+    {
+      "eligible_rows": 108409,
+      "persistence_log_rmse": 0.383469087896161,
+      "persistence_euro_mae": 525039.2033871727,
+      "existing_xgb_log_rmse": 0.9016198514893832,
+      "existing_xgb_euro_mae": 1641755.7929739312
+    }
+  ],
+  "persistence_protocol": "Strictly previous observed valuation, updated sequentially during the test period; same prediction clipping and matched rows. Uses valuation history that the current performance-only model excludes, so it is a separate information regime, not a fair algorithm comparison or a fixed-origin future forecast. First-history rows excluded.",
+  "appearance_sources": [
+    {
+      "first_date": "2012-07-03",
+      "last_date": "2026-06-28",
+      "row_count": 1894350,
+      "unique_appearances": 1894350,
+      "players": 29531
+    }
+  ],
+  "raw_valuation_keys": [
+    {
+      "row_count": 656301,
+      "duplicate_keys": 0
+    }
+  ],
+  "valuation_competition_vs_latest_prior_appearance": [
+    {
+      "recent_matches": 120887,
+      "different_club": 18076,
+      "different_club_pct": 14.95
+    }
+  ],
+  "club_check_caveat": "Diagnostic only: transfers, loans, and national-team appearances can explain club mismatches; this is not proof of leakage."
+}

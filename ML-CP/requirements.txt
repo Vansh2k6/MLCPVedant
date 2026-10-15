@@ -1,0 +1,11 @@
+# Packages imported by run_pipeline.py and src/*.py, pinned from the project .venv.
+duckdb==1.5.6
+matplotlib==3.11.2
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.18.1
+xgboost==3.4.1
+# Not imported directly: pandas needs it to read and write the .parquet files.
+pyarrow==25.0.1
+joblib==1.5.3

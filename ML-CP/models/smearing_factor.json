@@ -1,0 +1,12 @@
+{
+    "smearing_factor": 1.5044401114673078,
+    "method": "Duan smearing: mean(exp(residual_log)) on out-of-sample residuals",
+    "source": "last TimeSeriesSplit(n_splits=3) validation fold of the training set",
+    "feature_set": "Clean (snapshot features dropped)",
+    "fold_train_rows": 326961,
+    "fold_validation_rows": 108986,
+    "fold_validation_start": "2022-03-31",
+    "fold_validation_end": "2023-12-31",
+    "fold_validation_mean_residual_log": -0.03887401847546564,
+    "max_depth": 8
+}

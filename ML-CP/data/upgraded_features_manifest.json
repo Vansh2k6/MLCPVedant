@@ -1,0 +1,8 @@
+{
+  "source_hashes": {
+    "data\\processed_market_valuations.parquet": "a184a18cc76d9720699647e40b7eaf56252796dba172ead7a61be48e627408c4",
+    "appearances.csv": "c4ba5327f9005e4a9914c0f78c3b07132ef2cf1a4babda379bbf54ffd207ebec",
+    "src\\recent_features.py": "a0aca42c0a83f663798de2324aa57e6d47a07e5bdf66d99c6c3a9ef6e2d2b9ab"
+  },
+  "windows": "[date-window,date)"
+}

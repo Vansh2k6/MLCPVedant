@@ -1,0 +1,75 @@
+==========================================================================================
+FOOTBALL PLAYER VALUATION: RESIDUAL BREAKDOWN & RANKINGS REPORT
+==========================================================================================
+
+1. MODEL BIAS BY SEGMENT (Bias = actual - predicted; clean feature set):
+--------------------------------------------------
+- Overall (111,706 test rows): mean bias +€1.04M uncorrected, -€0.03M after smearing (log bias +0.081).
+- Age <21 (Prospects) (17,799 rows): mean bias +€1.15M uncorrected (model under-predicts), +€0.55M after smearing (model under-predicts); log bias +0.300 (model under-predicts in log terms); euro MAE €1.39M uncorrected; log MAE 0.906.
+- Age 21-24 (Ascending) (35,545 rows): mean bias +€1.51M uncorrected (model under-predicts), +€0.41M after smearing (model under-predicts); log bias +0.192 (model under-predicts in log terms); euro MAE €1.92M uncorrected; log MAE 0.737.
+- Age 25-28 (Peak) (31,286 rows): mean bias +€1.26M uncorrected (model under-predicts), -€0.20M after smearing (model over-predicts); log bias +0.067 (model under-predicts in log terms); euro MAE €1.98M uncorrected; log MAE 0.633.
+- Age 29-32 (Veterans) (18,716 rows): mean bias +€0.16M uncorrected (model under-predicts), -€0.89M after smearing (model over-predicts); log bias -0.125 (model over-predicts in log terms); euro MAE €1.09M uncorrected; log MAE 0.578.
+- Age 33+ (Late Career) (8,360 rows): mean bias -€0.07M uncorrected (model over-predicts), -€0.51M after smearing (model over-predicts); log bias -0.344 (model over-predicts in log terms); euro MAE €0.42M uncorrected; log MAE 0.603.
+- Tier 1 - Big 5 (19,817 rows): mean bias +€3.50M uncorrected (model under-predicts), -€0.48M after smearing (model over-predicts); log bias +0.275 (model under-predicts in log terms); euro MAE €5.20M uncorrected; log MAE 0.640.
+- Tier 2 - Top European (39,142 rows): mean bias +€0.66M uncorrected (model under-predicts), +€0.11M after smearing (model under-predicts); log bias +0.102 (model under-predicts in log terms); euro MAE €0.99M uncorrected; log MAE 0.659.
+- Tier 3 - Other First Tier (26,613 rows): mean bias +€0.61M uncorrected (model under-predicts), +€0.10M after smearing (model under-predicts); log bias -0.025 (model over-predicts in log terms); euro MAE €1.06M uncorrected; log MAE 0.767.
+- Tier 4 - Lower / Other (26,134 rows): mean bias +€0.17M uncorrected (model under-predicts), -€0.01M after smearing (model over-predicts); log bias +0.010 (model under-predicts in log terms); euro MAE €0.34M uncorrected; log MAE 0.731.
+- Highest log MAE: age band <21 (Prospects); league tier Tier 3 - Other First Tier. Highest euro MAE: league tier Tier 1 - Big 5.
+- Hypothesis (not tested here): the features contain no signal for potential, hype, or brand
+  value, which would push young and elite-league players' market values above the model's.
+
+2. TOP 20 PLAYERS WITH THE MODEL ABOVE MARKET VALUE (predicted - actual, uncorrected):
+--------------------------------------------------
+  20 players; 20 in Tier 1 - Big 5; median age 28.6; 1 with actual value >= €100M; gap range +€14.74M to +€50.00M.
+           player_name   age    position     league_tier                   club_name  actual_value_eur  predicted_value_eur  value_delta_eur  pct_difference
+1         Lamine Yamal  18.9      Attack  Tier 1 - Big 5                FC Barcelona         200000000          250000000.0       50000000.0            25.0
+2    Nikola Milenković  28.6    Defender  Tier 1 - Big 5           Nottingham Forest          28000000           54828215.0       26828215.0            95.8
+3      Marcus Rashford  28.6      Attack  Tier 1 - Big 5                FC Barcelona          40000000           65240022.0       25240022.0            63.1
+4       David Turnbull  24.9    Midfield  Tier 1 - Big 5                Cardiff City           3800000           26854851.0       23054851.0           606.7
+5       Gonçalo Guedes  29.5      Attack  Tier 1 - Big 5               Real Sociedad           6000000           25942671.0       19942671.0           332.4
+6          Deniz Undav  29.9      Attack  Tier 1 - Big 5               VfB Stuttgart          22000000           41871724.0       19871724.0            90.3
+7         Jadon Sancho  26.2      Attack  Tier 1 - Big 5                 Aston Villa          18000000           37830981.0       19830981.0           110.2
+8         Ilaix Moriba  23.4    Midfield  Tier 1 - Big 5               Celta de Vigo          15000000           34692823.0       19692823.0           131.3
+9        Pablo Fornals  30.3    Midfield  Tier 1 - Big 5         Real Betis Balompié           8000000           27682013.0       19682013.0           246.0
+10    Gianluca Mancini  30.1    Defender  Tier 1 - Big 5  Associazione Sportiva Roma          15000000           34580777.0       19580777.0           130.5
+11     Ibrahim Sangaré  28.5    Midfield  Tier 1 - Big 5           Nottingham Forest          20000000           39233241.0       19233241.0            96.2
+12         Xavi Simons  23.1    Midfield  Tier 1 - Big 5           Tottenham Hotspur          40000000           57030921.0       17030921.0            42.6
+13       Nikola Vlašić  28.7    Midfield  Tier 1 - Big 5                   Torino FC          10000000           26452174.0       16452174.0           164.5
+14      Lewis Ferguson  26.8    Midfield  Tier 1 - Big 5  Bologna Football Club 1909          14000000           30123600.0       16123600.0           115.2
+15    Manuel Locatelli  28.4    Midfield  Tier 1 - Big 5                 Juventus FC          25000000           40992050.0       15992050.0            64.0
+16      Victor Nelsson  27.6    Defender  Tier 1 - Big 5               Hellas Verona           6000000           21721521.0       15721521.0           262.0
+17     Mikel Oyarzabal  29.1      Attack  Tier 1 - Big 5               Real Sociedad          25000000           40682590.0       15682590.0            62.7
+18  Lorenzo Pellegrini  29.9    Midfield  Tier 1 - Big 5  Associazione Sportiva Roma           8000000           23465116.0       15465116.0           193.3
+19          Unai Simón  29.0  Goalkeeper  Tier 1 - Big 5             Athletic Bilbao          22000000           36768172.0       14768172.0            67.1
+20     Weston McKennie  27.8    Midfield  Tier 1 - Big 5                 Juventus FC          30000000           44736855.0       14736855.0            49.1
+
+3. TOP 20 PLAYERS WITH THE MODEL BELOW MARKET VALUE (predicted - actual, uncorrected):
+--------------------------------------------------
+  20 players; 20 in Tier 1 - Big 5; median age 24.6; 14 with actual value >= €100M; gap range -€106.23M to -€52.69M.
+              player_name   age  position     league_tier            club_name  actual_value_eur  predicted_value_eur  value_delta_eur  pct_difference
+1              João Neves  21.7  Midfield  Tier 1 - Big 5  Paris Saint-Germain         140000000           33768763.0     -106231237.0           -75.9
+2                 Vitinha  26.3  Midfield  Tier 1 - Big 5  Paris Saint-Germain         140000000           36618190.0     -103381810.0           -73.8
+3                   Pedri  23.5  Midfield  Tier 1 - Big 5         FC Barcelona         150000000           48202884.0     -101797116.0           -67.9
+4          Erling Haaland  25.9    Attack  Tier 1 - Big 5      Manchester City         200000000          110889842.0      -89110158.0           -44.6
+5   Khvicha Kvaratskhelia  25.3    Attack  Tier 1 - Big 5  Paris Saint-Germain         140000000           57406347.0      -82593653.0           -59.0
+6           Jamal Musiala  23.3  Midfield  Tier 1 - Big 5        Bayern Munich         100000000           25216348.0      -74783652.0           -74.8
+7             Désiré Doué  21.0    Attack  Tier 1 - Big 5  Paris Saint-Germain         120000000           47079710.0      -72920290.0           -60.8
+8           Kylian Mbappé  27.5    Attack  Tier 1 - Big 5          Real Madrid         180000000          113573879.0      -66426121.0           -36.9
+9         Jude Bellingham  22.9  Midfield  Tier 1 - Big 5          Real Madrid         130000000           64162940.0      -65837060.0           -50.6
+10          Michael Olise  24.5    Attack  Tier 1 - Big 5        Bayern Munich         150000000           85565394.0      -64434606.0           -43.0
+11    Aleksandar Pavlovic  22.1  Midfield  Tier 1 - Big 5        Bayern Munich          90000000           28301472.0      -61698528.0           -68.6
+12         Alexander Isak  26.7    Attack  Tier 1 - Big 5         Liverpool FC          85000000           25072184.0      -59927816.0           -70.5
+13        Ousmane Dembélé  29.1    Attack  Tier 1 - Big 5  Paris Saint-Germain         100000000           40911051.0      -59088949.0           -59.1
+14         Julián Alvarez  26.3    Attack  Tier 1 - Big 5   Atlético de Madrid         100000000           43618751.0      -56381249.0           -56.4
+15        Antoine Semenyo  26.4    Attack  Tier 1 - Big 5      Manchester City          80000000           25239590.0      -54760410.0           -68.5
+16           Fermín López  23.1  Midfield  Tier 1 - Big 5         FC Barcelona         100000000           45727145.0      -54272855.0           -54.3
+17                  Rayan  19.8    Attack  Tier 1 - Big 5      AFC Bournemouth          60000000            6063489.0      -53936511.0           -89.9
+18          Willian Pacho  24.6  Defender  Tier 1 - Big 5  Paris Saint-Germain          80000000           26222104.0      -53777896.0           -67.2
+19            Declan Rice  27.4  Midfield  Tier 1 - Big 5           Arsenal FC         120000000           66838119.0      -53161881.0           -44.3
+20           Yan Diomande  19.5    Attack  Tier 1 - Big 5           RB Leipzig          90000000           37309166.0      -52690834.0           -58.5
+
+CAVEAT:
+--------------------------------------------------
+This ranking has no ground-truth validation (no labeled 'good buy' or profitable transfer
+outcomes exist in this dataset). It lists the largest gaps between the model's prediction
+and the Transfermarkt value, not proof that either is wrong, and is not investment advice.

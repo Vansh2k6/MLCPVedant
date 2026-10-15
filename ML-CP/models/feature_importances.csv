@@ -1,0 +1,78 @@
+feature,gain
+league_tier_Tier 2 - Top European,1124.2523193359375
+appearances_last_365d,855.2073974609375
+league_tier_Tier 3 - Other First Tier,524.1544799804688
+minutes_last_365d,440.1993103027344
+competition_id_GB1,279.2156066894531
+competition_id_C1,223.83053588867188
+competition_id_MEX1,186.6931610107422
+competition_id_BRA1,136.92076110839844
+competition_id_TS1,132.6913604736328
+position_Goalkeeper,122.1389389038086
+competition_id_SER1,107.92852020263672
+competition_id_PL1,90.38899993896484
+competition_id_JAP1,85.44482421875
+competition_id_UKR1,84.2355728149414
+competition_id_AUS1,83.84178161621094
+competition_id_RSK1,79.94425201416016
+sub_position_Goalkeeper,74.9456558227539
+competition_id_DK1,74.15164947509766
+competition_id_COL1,69.43553161621094
+is_goalkeeper,65.48821258544922
+competition_id_SA1,61.56355667114258
+age_squared,61.348350524902344
+competition_id_SC1,61.10503005981445
+competition_id_ARG1,57.86452865600586
+competition_id_IT1,56.890663146972656
+league_tier_Tier 4 - Lower / Other,50.45542907714844
+competition_id_NO1,49.832984924316406
+competition_id_RO1,48.70851135253906
+competition_id_TR1,47.58161163330078
+competition_id_SE1,46.080047607421875
+competition_id_FR1,46.035400390625
+career_minutes_prior,41.320709228515625
+competition_id_MLS1,40.34625244140625
+competition_id_L1,38.88467788696289
+goal_contributions_per_90_clipped,37.69102096557617
+career_goals_prior,36.61378479003906
+competition_id_GR1,34.47785568237305
+career_assists_prior,34.433265686035156
+career_appearances_prior,34.17721176147461
+age,32.98872375488281
+competition_id_ES1,32.275333404541016
+competition_id_RU1,28.266483306884766
+assists_last_365d,28.211585998535156
+goals_last_365d,24.878185272216797
+position_Missing,22.419086456298828
+competition_id_NL1,21.11789894104004
+competition_id_BE1,20.188030242919922
+is_defender,15.580117225646973
+competition_id_PO1,15.302273750305176
+foot_left,13.869717597961426
+position_Defender,12.932367324829102
+is_attack,12.717594146728516
+sub_position_Centre-Forward,11.715678215026855
+foot_right,11.631684303283691
+sub_position_Second Striker,11.424569129943848
+competition_id_KR1,11.315312385559082
+gk_minutes_last_365d,10.677961349487305
+sub_position_Left Midfield,10.507461547851562
+sub_position_Right Winger,10.267979621887207
+sub_position_Defensive Midfield,9.537589073181152
+attack_goals_per_90,9.397244453430176
+sub_position_Left Winger,9.25633430480957
+sub_position_Centre-Back,9.132482528686523
+is_midfield,8.948286056518555
+sub_position_Right-Back,8.79397964477539
+minutes_per_appearance_365d,8.55005168914795
+sub_position_Central Midfield,8.231828689575195
+sub_position_Right Midfield,8.085835456848145
+position_Midfield,7.440794467926025
+height_in_cm,7.231423377990723
+sub_position_Left-Back,7.072145938873291
+def_minutes_last_365d,6.378574848175049
+midfield_assists_per_90,5.215343475341797
+goals_per_90_clipped,4.704127788543701
+assists_per_90_clipped,3.743084192276001
+yellow_cards_last_365d,3.3927371501922607
+red_cards_last_365d,3.063642740249634

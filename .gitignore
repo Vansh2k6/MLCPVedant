@@ -1,0 +1,49 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ipynb_checkpoints/
+.mplcache/
+.test_tmp/
+**/.codex/
+**/graphify-out/cache/
+
+# Virtual environments / dependencies
+.venv/
+**/.venv/
+venv/
+**/venv/
+env/
+**/env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE and Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+__MACOSX/
+.vscode/
+.idea/
+
+# Logs
+*.log
+*.stdout.log
+*.stderr.log
+
+# Local backups and zip archives (including >100MB bundles)
+*_backup/
+ML-CP_*/
+*.zip
+requirements-dashboard.zip
+
+# Raw data CSVs (these exceed GitHub's 100MB file limit)
+*.csv
+
+# Preserve trained model metrics, evaluation summaries, and analysis CSVs
+!**/models/**/*.csv
+!**/eda_outputs/**/*.csv
+!**/review/**/*.csv

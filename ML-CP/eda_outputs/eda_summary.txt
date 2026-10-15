@@ -1,0 +1,55 @@
+======================================================================
+FOOTBALL PLAYER MARKET VALUE: EDA & SPARSITY REPORT
+======================================================================
+
+Total Records Analyzed: 547,653
+Unique Players: 40,883
+
+1. TARGET DISTRIBUTION ANALYSIS:
+----------------------------------------
+Raw Market Value Mean:      €2,330,221.84
+Raw Market Value Median:    €500,000.00
+Raw Market Value Skewness:  8.5466
+Raw Market Value Kurtosis:  114.1917
+Log Market Value Mean:      13.2399
+Log Market Value Median:    13.1224
+Log Market Value Skewness:  0.5038
+Log Market Value Kurtosis:  0.1755
+
+2. PEAK MARKET VALUE AGE BY POSITION (age with the highest median value, ages binned 17-37):
+----------------------------------------
+- Goalkeeper  : Peak Age 28 years (Median: €500,000)
+- Defender    : Peak Age 28 years (Median: €750,000)
+- Midfield    : Peak Age 26 years (Median: €800,000)
+- Attack      : Peak Age 26 years (Median: €800,000)
+
+Earliest peak: Midfield, Attack (age 26). Latest peak: Goalkeeper, Defender (age 28).
+
+3. PERFORMANCE SPARSITY & POSITION-SPECIFIC FEATURE HANDLING:
+----------------------------------------
+  position  total_observations  zero_minutes_pct  zero_goals_pct  zero_assists_pct  avg_goals_365d  avg_assists_365d  avg_minutes_365d
+Goalkeeper               59811         70.030596       99.931451         98.712611        0.000685          0.014061        427.483423
+  Defender              178994         59.155614       83.940802         82.193258        0.299876          0.399740        588.871884
+  Midfield              158166         59.170745       77.904227         76.972295        0.695579          0.715881        528.555967
+    Attack              150094         58.641251       70.680374         74.196837        1.656455          0.891761        458.859835
+
+Handling of Missingness & Sparsity:
+a. NO BLANKET IMPUTATION OF PERFORMANCE STATS:
+   - Zero goals in the last 365 days is the norm for some positions (99.9% of Goalkeeper rows, 83.9% of Defender rows), so zeros are kept as
+     real values rather than replaced by an average (mean goals across the four positions: 0.75).
+b. POSITION-SPECIFIC INDICATORS & INTERACTIONS (see prepare_features in src/models.py):
+   - One-hot position flags (`is_goalkeeper`, `is_defender`, `is_midfield`, `is_attack`).
+   - Interaction terms: `attack_goals_per_90`, `midfield_assists_per_90`, `gk_minutes_last_365d`,
+     `def_minutes_last_365d`.
+   - Height: missing values filled with the training-set median for the position (no missing flag).
+   - Contract and club attributes are current snapshots; the headline model excludes them
+     (SNAPSHOT_FEATURES in src/models.py).
+
+4. KEY FINDINGS (computed):
+----------------------------------------
+- Peak median value age, Goalkeeper: 28 (median €500,000).
+- Peak median value age, Defender: 28 (median €750,000).
+- Peak median value age, Midfield: 26 (median €800,000).
+- Peak median value age, Attack: 26 (median €800,000).
+- Rows with zero goals in the last 365 days: Goalkeepers 99.9%, Defenders 83.9%.
+- Target skewness: 8.55 raw, 0.50 after the natural log transform (kurtosis 114.19 raw, 0.18 log).

@@ -1,0 +1,7 @@
+Model,Feature Set,Log RMSE,Log MAE,Euro RMSE,Euro MAE
+Naive Baseline (Position x Tier Median),Position x league tier medians (no model features),1.4904489063876045,1.1487741751433924,9047329.764330812,2795266.816464648
+Baseline Ridge Regression,Full (with snapshot features),1.1562092854503128,0.9050096445630135,7157729.332277282,2244636.594419533
+Baseline Ridge Regression,Clean (snapshot features dropped),1.1562092854503128,0.9050096445630135,7157729.332277282,2244636.594419533
+Main XGBoost Regressor,Full (with snapshot features),0.8507537539617268,0.6473238812115697,4193905.6931924946,1432443.482690889
+Main XGBoost Regressor,Clean (snapshot features dropped),0.9108405436330822,0.6980602727317591,4779167.1804875145,1600833.2726983007
+"% Change (XGBoost, clean vs full; positive = worse)",Clean vs Full,7.06%,7.84%,13.96%,11.76%
